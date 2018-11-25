@@ -8,5 +8,6 @@ export const CHANGE_USER_PROFILE = 'CHANGE_USER_PROFILE';
 export const CHANGE_MATCHER_PROFILE = 'CHANGE_MATCHER_PROFILE';
 export const GET_MATCHER_PROFILE = 'GET_MATCHER_PROFILE';
 
+
 export const INCREMENT = 'increment';
 export const DECREMENT = 'decrement';
