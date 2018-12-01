@@ -30,6 +30,10 @@ class CpInterface extends React.Component {
         //     .then(json => console.log(json))
         // let a = 'uyio';
         // this.props.getUserInfo(a)
+        // axios.get('https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxcb6afee676d68aa8&redirect_uri=http%3a%2f%2foneweekcpuni.mynatapp.cc%2f&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect')
+        //     .then(json => console.log(json))
+        axios.get('http://oneweekcpuni.mynatapp.cc/api/hello')
+            .then(json => console.log(json))
     }
 
     render() {
@@ -42,7 +46,7 @@ class CpInterface extends React.Component {
             )
         } else {
             mainPage = (
-                <div >
+                <div>
                     <div style={{
                         // marginTop: '1%'
                         //假如是用户资料,则marginBottom 设20%,假如不是,则不设置

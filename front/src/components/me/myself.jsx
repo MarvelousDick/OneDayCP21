@@ -104,7 +104,7 @@ class Myself extends React.Component {
                             </Typography>
                             <Typography component="p">
                                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                across all continents except Antarctica
+                                across all c0000ontinents e999xcept Antarctica
                             </Typography>
                         </CardContent>
                     </CardActionArea>

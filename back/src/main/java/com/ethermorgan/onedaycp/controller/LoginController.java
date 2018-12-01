@@ -10,8 +10,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class LoginController {
-    @RequestMapping(value = "wx",method= RequestMethod.GET)
-    public void login(HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping(value = "wx", method = RequestMethod.GET)
+    public void login(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("success");
         String signature = request.getParameter("signature");
         String timestamp = request.getParameter("timestamp");
@@ -20,13 +20,13 @@ public class LoginController {
         PrintWriter out = null;
         try {
             out = response.getWriter();
-            if(CheckUtil.checkSignature(signature, timestamp, nonce)){
+            if (CheckUtil.checkSignature(signature, timestamp, nonce)) {
                 out.write(echostr);
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }finally{
+        } finally {
             out.close();
         }
 

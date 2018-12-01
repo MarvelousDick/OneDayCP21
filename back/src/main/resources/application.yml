@@ -9,3 +9,8 @@ server:
   port: 8888
   #项目名，如果不设定，默认是 /
 #  context-path: /demo
+wechat:
+  #微信开发者ID
+  mpAppId: wxcb6afee676d68aa8
+  #微信开发者密码
+  mpAppSecret: 38cf957a98a2ac009a2b2840e74fd52f

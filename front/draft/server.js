@@ -4,12 +4,12 @@ var express = require('express');
 var app = express();
 //接受指定路径的请求，指定回调函数
 app.get('/', function (req, res){
-    res.send('Hello World');
+    res.send('Hello World6');
 });
 //创建一个web服务器，可以认为就是web服务器对象
 //监听8081端口，当监听成功时回调
-var server = app.listen(8081, function () {
+var server = app.listen(8888, function () {
     var host = server.address().address;  //地址
     var port = server.address().port;  //端口
-    console.log("应用实例，访问地址为 http://localhost:8081", host, port);
+    console.log("应用实例，访问地址为 http://localhost:8888", host, port);
 });
