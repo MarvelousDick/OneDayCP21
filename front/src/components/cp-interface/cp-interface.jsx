@@ -32,7 +32,7 @@ class CpInterface extends React.Component {
         // this.props.getUserInfo(a)
         // axios.get('https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxcb6afee676d68aa8&redirect_uri=http%3a%2f%2foneweekcpuni.mynatapp.cc%2f&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect')
         //     .then(json => console.log(json))
-        axios.get('http://oneweekcpuni.mynatapp.cc/api/hello')
+        axios.get('http://oneweekcpuni.mynatapp.cc/api/test/hello')
             .then(json => console.log(json))
     }
 

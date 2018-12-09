@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/back" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weixin-java-mp-demo-springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/weixin-java-mp-demo-springboot" charset="UTF-8" />
     <file url="file://C:/Develop/Doc/Document/pr-doc/invoice_system/sql/output_tables.sql" charset="GBK" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.ethermorgan.onedaycp.config;
 
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Component;
  * @description 获取配置信息
  * @date 2018/8/11 14:40
  */
+
+
 @Component
 @ConfigurationProperties(prefix = "wechat")
 public class WechatAccountConfig {

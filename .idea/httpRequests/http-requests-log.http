@@ -1,0 +1,70 @@
+GET http://localhost:8888/user/allWx?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T120125.200.json
+
+###
+
+GET http://localhost:8888/test/allWx?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T120103.404.json
+
+###
+
+GET http://localhost:8888/test/allWx?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-06T120015.404.json
+
+###
+
+GET http://localhost:8888/test/hello?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T114752.200.txt
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T114726.200.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T114506.404.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T112622.404.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T050135.200.json
+
+###
+
+GET localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+###
+

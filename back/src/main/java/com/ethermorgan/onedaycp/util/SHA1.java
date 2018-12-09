@@ -3,13 +3,13 @@ package com.ethermorgan.onedaycp.util;
 import java.security.MessageDigest;
 
 /**
- *
  * 类名称: SHA1
  * 类描述: sha1加密
+ *
  * @author yuanjun
  * 创建时间:2017年12月5日上午11:10:01
  */
-public final  class SHA1 {
+public final class SHA1 {
     private static final char[] HEX_DIGITS = {'0', '1', '2', '3', '4', '5',
             '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
