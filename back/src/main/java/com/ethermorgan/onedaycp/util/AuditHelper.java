@@ -33,7 +33,7 @@ public class AuditHelper {
             mirror.getField("updateTime");
             mirror.setValue(obj, "updateTime", new Date());
         } catch (NoSuchFieldException e) {
-            // ingore it
+            // ignore it
         }
 
         try {

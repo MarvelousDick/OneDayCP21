@@ -15,7 +15,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import CommentIcon from '@material-ui/icons/Comment';
+
+import TextField from '@material-ui/core/TextField';
 
 
 const styles = theme => ({
@@ -33,6 +34,7 @@ const styles = theme => ({
 class Myself extends React.Component {
     state = {
         checked: [1],
+        name: '999'
     };
 
     handleToggle = value => () => {
@@ -48,6 +50,14 @@ class Myself extends React.Component {
 
         this.setState({
             checked: newChecked,
+        });
+
+    };
+
+    handleChange = name => event => {
+
+        this.setState({
+            [name]: event.target.value,
         });
     };
 

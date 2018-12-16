@@ -2,7 +2,7 @@ package com.ethermorgan.onedaycp.model;
 
 import java.util.Date;
 
-public class WXUserInfo {
+public class WxUserInfo {
     private String id;
 
     private String openid;

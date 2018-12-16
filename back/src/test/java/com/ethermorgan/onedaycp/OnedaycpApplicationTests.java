@@ -1,6 +1,6 @@
 package com.ethermorgan.onedaycp;
 
-import com.ethermorgan.onedaycp.mapper.WXUserInfoMapper;
+import com.ethermorgan.onedaycp.mapper.WxUserInfoMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class OnedaycpApplicationTests {
 
-    WXUserInfoMapper wxUserInfoMapper;
+    WxUserInfoMapper wxUserInfoMapper;
 
     @Test
     public void contextLoads() {

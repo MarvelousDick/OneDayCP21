@@ -1,9 +1,9 @@
 package com.ethermorgan.onedaycp.service;
 
 
-
+import com.ethermorgan.onedaycp.dto.WxUserInfoReceived;
 import com.ethermorgan.onedaycp.model.TUser;
-import com.ethermorgan.onedaycp.model.WXUserInfo;
+import com.ethermorgan.onedaycp.model.WxUserInfo;
 import com.github.pagehelper.PageInfo;
 
 /**
@@ -15,5 +15,7 @@ public interface UserService {
 
     PageInfo<TUser> findAllUser(int pageNum, int pageSize);
 
-    WXUserInfo findWxUser();
+    WxUserInfo findWxUser();
+
+    int storeWxUserInfo(WxUserInfoReceived wxUserInfoReceived);
 }

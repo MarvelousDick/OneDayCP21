@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.ethermorgan.onedaycp.mapper.WXUserInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.ethermorgan.onedaycp.model.WXUserInfo" >
+<mapper namespace="com.ethermorgan.onedaycp.mapper.WxUserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.ethermorgan.onedaycp.model.WxUserInfo" >
     <id column="ID" property="id" jdbcType="VARCHAR" />
     <result column="OpenID" property="openid" jdbcType="VARCHAR" />
     <result column="NickName" property="nickname" jdbcType="VARCHAR" />
@@ -26,7 +26,7 @@
     delete from wx_user_info
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.ethermorgan.onedaycp.model.WXUserInfo" >
+  <insert id="insert" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
     insert into wx_user_info (ID, OpenID, NickName, 
       Sex, Province, City, 
       Country, HeadimgURL, Unionid, 
@@ -36,7 +36,7 @@
       #{country,jdbcType=VARCHAR}, #{headimgurl,jdbcType=VARCHAR}, #{unionid,jdbcType=VARCHAR}, 
       #{createtime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.ethermorgan.onedaycp.model.WXUserInfo" >
+  <insert id="insertSelective" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
     insert into wx_user_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -103,7 +103,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ethermorgan.onedaycp.model.WXUserInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
     update wx_user_info
     <set >
       <if test="openid != null" >
@@ -136,7 +136,7 @@
     </set>
     where ID = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.ethermorgan.onedaycp.model.WXUserInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
     update wx_user_info
     set OpenID = #{openid,jdbcType=VARCHAR},
       NickName = #{nickname,jdbcType=VARCHAR},

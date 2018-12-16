@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-12-10T15:59:03.689+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Could not find result map java.lang.String",
+  "path": "//test/match"
+}

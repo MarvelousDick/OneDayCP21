@@ -1,3 +1,103 @@
+GET http://oneweekcpuni.mynatapp.cc/api/test/match?pageNum=1&pageSize=2&userName=yang
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T115903.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T115752.500.json
+
+###
+
+GET http://localhost:8080/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T115509.200.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T114651-1.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T114651.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T114310.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T114016.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T113946.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T113652.500.json
+
+###
+
+GET http://localhost:8888/user/all?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T113557.500.json
+
+###
+
+GET http://localhost:8888/user/allWx?pageNum=1&pageSize=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-10T113544.500.json
+
+###
+
 GET http://localhost:8888/user/allWx?pageNum=1&pageSize=2
 Accept: */*
 Cache-Control: no-cache

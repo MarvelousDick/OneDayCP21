@@ -15,6 +15,8 @@ import Myself from '../me/myself'
 import axios from 'axios'
 import Card from "@material-ui/core/Card/Card";
 
+import TestMatch from "../test-component/test-match"
+
 const styles = {
     root: {},
 };
@@ -58,6 +60,7 @@ class CpInterface extends React.Component {
                         {/*<UserProfile/>*/}
                         {/*<NewUserProfile/>*/}
                         {/*<Match/>*/}
+                        {/*<TestMatch/>*/}
                         <Myself/>
                     </div>
                     <div style={{
@@ -66,7 +69,8 @@ class CpInterface extends React.Component {
                         position: 'fixed'
                     }}>
                         {/*<BottomBar/>*/}
-                        <TestComponent3/>
+                        {/*<TestComponent3/>*/}
+
                     </div>
                 </div>
             )

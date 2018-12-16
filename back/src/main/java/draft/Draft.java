@@ -1,15 +1,17 @@
 package draft;
 
+import javax.xml.crypto.Data;
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class Draft {
 
     public static void main(String[] args) {
 
-        short a = 666;
-        if (a == 666) {
-            System.out.println(999);
-        }
+        Integer a = 10;
+
+        short b = (short) (int)a;
+
 
     }
 

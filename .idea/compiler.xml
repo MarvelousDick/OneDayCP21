@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="onedaycp" />
+        <module name="springboot2-mybatis-demo" />
         <module name="weixin-java-mp-demo-springboot" />
       </profile>
     </annotationProcessing>
@@ -14,6 +15,7 @@
       <module name="onedaycp" target="1.8" />
       <module name="onedaycp (1)" target="1.8" />
       <module name="onedaycp (1) (com.ethermogan)" target="1.8" />
+      <module name="springboot2-mybatis-demo" target="1.8" />
       <module name="weixin-java-mp-demo-springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -22,6 +24,7 @@
       <module name="onedaycp" options="-parameters" />
       <module name="onedaycp (1)" options="-parameters" />
       <module name="onedaycp (1) (com.ethermogan)" options="-parameters" />
+      <module name="springboot2-mybatis-demo" options="-parameters" />
       <module name="weixin-java-mp-demo-springboot" options="-parameters" />
     </option>
   </component>

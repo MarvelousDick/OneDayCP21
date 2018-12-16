@@ -1,6 +1,8 @@
 package com.ethermorgan.onedaycp.controller;
 
 
+import com.ethermorgan.onedaycp.dto.WxUserInfoReceived;
+import com.ethermorgan.onedaycp.service.UserService;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
@@ -12,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.alibaba.fastjson.JSONObject;
+
 
 import java.net.URLEncoder;
 
@@ -26,6 +30,9 @@ public class WechatController {
     private Logger logger = Logger.getLogger(getClass());
     @Autowired
     private WxMpService wxMpService;
+
+    @Autowired
+    private UserService userService;
 
     /**
      * @Description: 微信授权
@@ -59,6 +66,9 @@ public class WechatController {
         try {
             wxMpOAuth2AccessToken = wxMpService.oauth2getAccessToken(code);
             WxMpUser wxMpUser = wxMpService.oauth2getUserInfo(wxMpOAuth2AccessToken, null);
+            String wxMpUserStr = JSONObject.toJSONString(wxMpUser);
+            WxUserInfoReceived wxUserInfoReceived = (WxUserInfoReceived) JSONObject.parseObject(wxMpUserStr, WxUserInfoReceived.class);
+            userService.storeWxUserInfo(wxUserInfoReceived);
             System.out.println(wxMpUser.toString());
             logger.debugv("【微信网页授权获】获取用户信息：{}", wxMpUser);
         } catch (WxErrorException e) {
@@ -67,4 +77,7 @@ public class WechatController {
         }
         return "redirect:" + returnUrl;
     }
+
+
+
 }

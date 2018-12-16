@@ -1,0 +1,9 @@
+‘À––Nginx  
+cd C:\Cheng\dev\OnedayCP21\tool\nginx  
+start nginx
+nginx -s quit
+nginx.exe
+start nginx
+nginx -s stop
+nginx -s quit
+nginx -s reload

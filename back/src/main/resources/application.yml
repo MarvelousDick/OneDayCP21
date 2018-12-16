@@ -1,19 +1,5 @@
-#logging:
-#  #日志存储地址
-#  file: "logs/config/demo-xx.log"
-#info:
-#  name : "入门案例"
-
 server:
-  #端口号
   port: 8888
-  #项目名，如果不设定，默认是 /
-#  context-path: /demo
-
-wechat:
-  mpAppId: wxcb6afee676d68aa8
-  mpAppSecret: 38cf957a98a2ac009a2b2840e74fd52f
-
 
 spring:
   datasource:
@@ -45,10 +31,14 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
-## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+
 mybatis:
-  mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
-  type-aliases-package: com.ethermorgan.onedaycp.model  # 注意：对应实体类的路径
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.winterchen.model
+
+wechat:
+  mpAppId: wxcb6afee676d68aa8
+  mpAppSecret: 38cf957a98a2ac009a2b2840e74fd52f
 
 #pagehelper
 pagehelper:

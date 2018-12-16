@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/backnew/src/main/main.iml" filepath="$PROJECT_DIR$/backnew/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/back/onedaycp.iml" filepath="$PROJECT_DIR$/back/onedaycp.iml" />
       <module fileurl="file://$PROJECT_DIR$/backnew/onedaycp.iml" filepath="$PROJECT_DIR$/backnew/onedaycp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot2-mybatis-demo/springboot2-mybatis-demo.iml" filepath="$PROJECT_DIR$/springboot2-mybatis-demo/springboot2-mybatis-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/backnew/src/test/test.iml" filepath="$PROJECT_DIR$/backnew/src/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/weixin-java-mp-demo-springboot/weixin-java-mp-demo-springboot.iml" filepath="$PROJECT_DIR$/weixin-java-mp-demo-springboot/weixin-java-mp-demo-springboot.iml" />
     </modules>
