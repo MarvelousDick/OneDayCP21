@@ -36,4 +36,10 @@ public class UserController {
         return userService.findWxUser();
     }
 
+//    @ApiOperation(value ="Render to user")
+
+
+//    @ResponseBody
+//    @GetMapping
+
 }

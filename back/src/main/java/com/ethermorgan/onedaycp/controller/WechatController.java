@@ -57,7 +57,7 @@ public class WechatController {
      * @Date: 2018/8/11 15:08
      * <p>
      * <p>
-     * 用于直接返回到网址
+     * 用于直接返回到网址,并将用户信息存到数据库
      */
     @GetMapping("/userInfo")
     public String userInfo(@RequestParam("code") String code,
