@@ -32,6 +32,7 @@ create table if not exists wx_user_info
 		unique (ID)
 );
 
+
 alter table wx_user_info
 	add primary key (ID);
 
