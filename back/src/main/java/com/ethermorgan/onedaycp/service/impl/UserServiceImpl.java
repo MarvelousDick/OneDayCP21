@@ -1,19 +1,24 @@
 package com.ethermorgan.onedaycp.service.impl;
 
 import com.ethermorgan.onedaycp.dto.WxUserInfoReceived;
-import com.ethermorgan.onedaycp.mapper.TUserMapper;
 
+import com.ethermorgan.onedaycp.mapper.UserInfoMapper;
 import com.ethermorgan.onedaycp.mapper.WxUserInfoMapper;
-import com.ethermorgan.onedaycp.model.TUser;
 
+import com.ethermorgan.onedaycp.model.UserInfo;
+import com.ethermorgan.onedaycp.model.UserInfoExample;
 import com.ethermorgan.onedaycp.model.WxUserInfo;
+import com.ethermorgan.onedaycp.model.WxUserInfoExample;
 import com.ethermorgan.onedaycp.service.UserService;
 import com.ethermorgan.onedaycp.util.TransUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import me.chanjar.weixin.mp.bean.result.WxMpUser;
+
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
+
 
 import java.util.Date;
 import java.util.List;
@@ -23,34 +28,17 @@ import java.util.UUID;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private TUserMapper userDao;//这里会报错，但是并不会影响
+//    @Autowired
+//    private TUserMapper userDao;//这里会报错，但是并不会影响
 
     @Autowired
     private WxUserInfoMapper wxUserInfoMapper;
 
     @Autowired
+    private UserInfoMapper userInfoMapper;
+
+    @Autowired
     private TransUtils transUtils;
-
-    @Override
-    public int addUser(TUser user) {
-        return userDao.insert(user);
-    }
-
-    /*
-     * 这个方法中用到了我们开头配置依赖的分页插件pagehelper
-     * 很简单，只需要在service层传入参数，然后将参数传递给一个插件的一个静态方法即可；
-     * pageNum 开始页数
-     * pageSize 每页显示的数据条数
-     * */
-    @Override
-    public PageInfo<TUser> findAllUser(int pageNum, int pageSize) {
-        //将参数传给这个方法就可以实现物理分页了，非常简单。
-        PageHelper.startPage(pageNum, pageSize);
-        List<TUser> userDomains = userDao.selectUsers();
-        PageInfo result = new PageInfo(userDomains);
-        return result;
-    }
 
     @Override
     public WxUserInfo findWxUser() {
@@ -65,6 +53,38 @@ public class UserServiceImpl implements UserService {
         return recNum;
     }
 
+    @Override
+    public int storeUserInfo(WxUserInfoReceived wxUserInfoReceived) {
+        UserInfo userInfo = new UserInfo();
+        populateUserInfoFields(wxUserInfoReceived, userInfo);
+        int recNum = userInfoMapper.insert(userInfo);
+        return recNum;
+    }
+
+    @Override
+    public List<WxUserInfo> selectWxUserByOpenId(String openId) {
+        WxUserInfoExample wxUserInfoExample = new WxUserInfoExample();
+        wxUserInfoExample.createCriteria().andOpenidEqualTo(openId);
+        List<WxUserInfo> wxUserList = wxUserInfoMapper.selectByExample(wxUserInfoExample);
+        return wxUserList;
+    }
+
+    @Override
+    public List<UserInfo> selectUserInfoByOpenId(String openId){
+        UserInfoExample userInfoExample = new UserInfoExample();
+        userInfoExample.createCriteria().andOpenidEqualTo(openId);
+        List<UserInfo> userInfoList = userInfoMapper.selectByExample(userInfoExample);
+        return userInfoList;
+    }
+
+    private void populateUserInfoFields(WxUserInfoReceived wxUserInfoReceived, UserInfo userInfo) {
+        userInfo.setId(UUID.randomUUID().toString());
+        userInfo.setOpenid(wxUserInfoReceived.getOpenId());
+        userInfo.setNickname(wxUserInfoReceived.getNickname());
+        userInfo.setSex((short) (int) wxUserInfoReceived.getSex());
+        userInfo.setUserstatus((short) 1);
+        userInfo.setCreatetime(new Date());
+    }
 
     private void populateWXUserInfoFields(WxUserInfoReceived wxUserInfoReceived, WxUserInfo wxUserInfo) {
         wxUserInfo.setId(UUID.randomUUID().toString());

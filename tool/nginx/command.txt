@@ -1,5 +1,8 @@
 ‘À––Nginx  
 cd C:\Cheng\dev\OnedayCP21\tool\nginx  
+
+cd C:\Files\Develop\Code\OneDayCP21\tool\nginx
+
 start nginx
 nginx -s quit
 nginx.exe

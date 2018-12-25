@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.ethermorgan.onedaycp.mapper.WxUserInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.ethermorgan.onedaycp.model.WxUserInfo" >
+<mapper namespace="com.ethermorgan.onedaycp.mapper.UserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.ethermorgan.onedaycp.model.UserInfo" >
     <id column="ID" property="id" jdbcType="VARCHAR" />
     <result column="OpenID" property="openid" jdbcType="VARCHAR" />
     <result column="NickName" property="nickname" jdbcType="VARCHAR" />
     <result column="Sex" property="sex" jdbcType="SMALLINT" />
-    <result column="Province" property="province" jdbcType="VARCHAR" />
-    <result column="City" property="city" jdbcType="VARCHAR" />
-    <result column="Country" property="country" jdbcType="VARCHAR" />
-    <result column="HeadimgURL" property="headimgurl" jdbcType="VARCHAR" />
-    <result column="Unionid" property="unionid" jdbcType="VARCHAR" />
+    <result column="Birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="WechatID" property="wechatid" jdbcType="VARCHAR" />
+    <result column="University" property="university" jdbcType="VARCHAR" />
+    <result column="Major" property="major" jdbcType="VARCHAR" />
+    <result column="UserStatus" property="userstatus" jdbcType="SMALLINT" />
     <result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -72,16 +72,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    ID, OpenID, NickName, Sex, Province, City, Country, HeadimgURL, Unionid, CreateTime
+    ID, OpenID, NickName, Sex, Birthday, WechatID, University, Major, UserStatus, CreateTime
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ethermorgan.onedaycp.model.WxUserInfoExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ethermorgan.onedaycp.model.UserInfoExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
-    from wx_user_info
+    from user_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -92,31 +92,31 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
-    from wx_user_info
+    from user_info
     where ID = #{id,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from wx_user_info
+    delete from user_info
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.ethermorgan.onedaycp.model.WxUserInfoExample" >
-    delete from wx_user_info
+  <delete id="deleteByExample" parameterType="com.ethermorgan.onedaycp.model.UserInfoExample" >
+    delete from user_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
-    insert into wx_user_info (ID, OpenID, NickName, 
-      Sex, Province, City, 
-      Country, HeadimgURL, Unionid, 
+  <insert id="insert" parameterType="com.ethermorgan.onedaycp.model.UserInfo" >
+    insert into user_info (ID, OpenID, NickName, 
+      Sex, Birthday, WechatID, 
+      University, Major, UserStatus, 
       CreateTime)
     values (#{id,jdbcType=VARCHAR}, #{openid,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
-      #{sex,jdbcType=SMALLINT}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
-      #{country,jdbcType=VARCHAR}, #{headimgurl,jdbcType=VARCHAR}, #{unionid,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=SMALLINT}, #{birthday,jdbcType=TIMESTAMP}, #{wechatid,jdbcType=VARCHAR}, 
+      #{university,jdbcType=VARCHAR}, #{major,jdbcType=VARCHAR}, #{userstatus,jdbcType=SMALLINT}, 
       #{createtime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
-    insert into wx_user_info
+  <insert id="insertSelective" parameterType="com.ethermorgan.onedaycp.model.UserInfo" >
+    insert into user_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         ID,
@@ -130,20 +130,20 @@
       <if test="sex != null" >
         Sex,
       </if>
-      <if test="province != null" >
-        Province,
+      <if test="birthday != null" >
+        Birthday,
       </if>
-      <if test="city != null" >
-        City,
+      <if test="wechatid != null" >
+        WechatID,
       </if>
-      <if test="country != null" >
-        Country,
+      <if test="university != null" >
+        University,
       </if>
-      <if test="headimgurl != null" >
-        HeadimgURL,
+      <if test="major != null" >
+        Major,
       </if>
-      <if test="unionid != null" >
-        Unionid,
+      <if test="userstatus != null" >
+        UserStatus,
       </if>
       <if test="createtime != null" >
         CreateTime,
@@ -162,34 +162,34 @@
       <if test="sex != null" >
         #{sex,jdbcType=SMALLINT},
       </if>
-      <if test="province != null" >
-        #{province,jdbcType=VARCHAR},
+      <if test="birthday != null" >
+        #{birthday,jdbcType=TIMESTAMP},
       </if>
-      <if test="city != null" >
-        #{city,jdbcType=VARCHAR},
+      <if test="wechatid != null" >
+        #{wechatid,jdbcType=VARCHAR},
       </if>
-      <if test="country != null" >
-        #{country,jdbcType=VARCHAR},
+      <if test="university != null" >
+        #{university,jdbcType=VARCHAR},
       </if>
-      <if test="headimgurl != null" >
-        #{headimgurl,jdbcType=VARCHAR},
+      <if test="major != null" >
+        #{major,jdbcType=VARCHAR},
       </if>
-      <if test="unionid != null" >
-        #{unionid,jdbcType=VARCHAR},
+      <if test="userstatus != null" >
+        #{userstatus,jdbcType=SMALLINT},
       </if>
       <if test="createtime != null" >
         #{createtime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.ethermorgan.onedaycp.model.WxUserInfoExample" resultType="java.lang.Integer" >
-    select count(*) from wx_user_info
+  <select id="countByExample" parameterType="com.ethermorgan.onedaycp.model.UserInfoExample" resultType="java.lang.Integer" >
+    select count(*) from user_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update wx_user_info
+    update user_info
     <set >
       <if test="record.id != null" >
         ID = #{record.id,jdbcType=VARCHAR},
@@ -203,20 +203,20 @@
       <if test="record.sex != null" >
         Sex = #{record.sex,jdbcType=SMALLINT},
       </if>
-      <if test="record.province != null" >
-        Province = #{record.province,jdbcType=VARCHAR},
+      <if test="record.birthday != null" >
+        Birthday = #{record.birthday,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.city != null" >
-        City = #{record.city,jdbcType=VARCHAR},
+      <if test="record.wechatid != null" >
+        WechatID = #{record.wechatid,jdbcType=VARCHAR},
       </if>
-      <if test="record.country != null" >
-        Country = #{record.country,jdbcType=VARCHAR},
+      <if test="record.university != null" >
+        University = #{record.university,jdbcType=VARCHAR},
       </if>
-      <if test="record.headimgurl != null" >
-        HeadimgURL = #{record.headimgurl,jdbcType=VARCHAR},
+      <if test="record.major != null" >
+        Major = #{record.major,jdbcType=VARCHAR},
       </if>
-      <if test="record.unionid != null" >
-        Unionid = #{record.unionid,jdbcType=VARCHAR},
+      <if test="record.userstatus != null" >
+        UserStatus = #{record.userstatus,jdbcType=SMALLINT},
       </if>
       <if test="record.createtime != null" >
         CreateTime = #{record.createtime,jdbcType=TIMESTAMP},
@@ -227,23 +227,23 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update wx_user_info
+    update user_info
     set ID = #{record.id,jdbcType=VARCHAR},
       OpenID = #{record.openid,jdbcType=VARCHAR},
       NickName = #{record.nickname,jdbcType=VARCHAR},
       Sex = #{record.sex,jdbcType=SMALLINT},
-      Province = #{record.province,jdbcType=VARCHAR},
-      City = #{record.city,jdbcType=VARCHAR},
-      Country = #{record.country,jdbcType=VARCHAR},
-      HeadimgURL = #{record.headimgurl,jdbcType=VARCHAR},
-      Unionid = #{record.unionid,jdbcType=VARCHAR},
+      Birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      WechatID = #{record.wechatid,jdbcType=VARCHAR},
+      University = #{record.university,jdbcType=VARCHAR},
+      Major = #{record.major,jdbcType=VARCHAR},
+      UserStatus = #{record.userstatus,jdbcType=SMALLINT},
       CreateTime = #{record.createtime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
-    update wx_user_info
+  <update id="updateByPrimaryKeySelective" parameterType="com.ethermorgan.onedaycp.model.UserInfo" >
+    update user_info
     <set >
       <if test="openid != null" >
         OpenID = #{openid,jdbcType=VARCHAR},
@@ -254,20 +254,20 @@
       <if test="sex != null" >
         Sex = #{sex,jdbcType=SMALLINT},
       </if>
-      <if test="province != null" >
-        Province = #{province,jdbcType=VARCHAR},
+      <if test="birthday != null" >
+        Birthday = #{birthday,jdbcType=TIMESTAMP},
       </if>
-      <if test="city != null" >
-        City = #{city,jdbcType=VARCHAR},
+      <if test="wechatid != null" >
+        WechatID = #{wechatid,jdbcType=VARCHAR},
       </if>
-      <if test="country != null" >
-        Country = #{country,jdbcType=VARCHAR},
+      <if test="university != null" >
+        University = #{university,jdbcType=VARCHAR},
       </if>
-      <if test="headimgurl != null" >
-        HeadimgURL = #{headimgurl,jdbcType=VARCHAR},
+      <if test="major != null" >
+        Major = #{major,jdbcType=VARCHAR},
       </if>
-      <if test="unionid != null" >
-        Unionid = #{unionid,jdbcType=VARCHAR},
+      <if test="userstatus != null" >
+        UserStatus = #{userstatus,jdbcType=SMALLINT},
       </if>
       <if test="createtime != null" >
         CreateTime = #{createtime,jdbcType=TIMESTAMP},
@@ -275,16 +275,16 @@
     </set>
     where ID = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.ethermorgan.onedaycp.model.WxUserInfo" >
-    update wx_user_info
+  <update id="updateByPrimaryKey" parameterType="com.ethermorgan.onedaycp.model.UserInfo" >
+    update user_info
     set OpenID = #{openid,jdbcType=VARCHAR},
       NickName = #{nickname,jdbcType=VARCHAR},
       Sex = #{sex,jdbcType=SMALLINT},
-      Province = #{province,jdbcType=VARCHAR},
-      City = #{city,jdbcType=VARCHAR},
-      Country = #{country,jdbcType=VARCHAR},
-      HeadimgURL = #{headimgurl,jdbcType=VARCHAR},
-      Unionid = #{unionid,jdbcType=VARCHAR},
+      Birthday = #{birthday,jdbcType=TIMESTAMP},
+      WechatID = #{wechatid,jdbcType=VARCHAR},
+      University = #{university,jdbcType=VARCHAR},
+      Major = #{major,jdbcType=VARCHAR},
+      UserStatus = #{userstatus,jdbcType=SMALLINT},
       CreateTime = #{createtime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=VARCHAR}
   </update>

@@ -1,12 +1,7 @@
 package com.ethermorgan.onedaycp.controller;
 
-
-import com.ethermorgan.onedaycp.dto.UpdateDto;
-import com.ethermorgan.onedaycp.mapper.MatchGameMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Autowired
-    MatchGameMapper matchGameMapper;
+//    @Autowired
+//    MatchGameMapper matchGameMapper;
 
     @ResponseBody
     @RequestMapping("/hello")
@@ -23,7 +18,7 @@ public class TestController {
         return "Hello World!";
     }
 
-
+/*
     @ResponseBody
     @RequestMapping("/match")
     public String match(@RequestParam("userName") String userName) {
@@ -50,7 +45,7 @@ public class TestController {
 
         return matchUser;
     }
-
+*/
 //    @ResponseBody
 //    @RequestMapping(value = "/add", produces = {"application/json;charset=UTF-8"})
 //    public

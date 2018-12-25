@@ -36,3 +36,21 @@ create table if not exists wx_user_info
 alter table wx_user_info
 	add primary key (ID);
 
+
+
+create table if not exists user_info
+(
+	ID varchar(128) not null,
+	OpenID varchar(128) null,
+	NickName varchar(58) null,
+	Sex smallint(6) null,
+	Birthday datetime null,
+  WechatID varchar(128) null,
+  University varchar(128) null,
+  Major varchar(128) null,
+	CreateTime datetime null,
+);
+
+
+alter table user_info
+	add primary key (ID);

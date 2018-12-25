@@ -1,7 +1,6 @@
 package com.ethermorgan.onedaycp.controller;
 
 
-import com.ethermorgan.onedaycp.model.TUser;
 import com.ethermorgan.onedaycp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,21 +13,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @ResponseBody
-    @PostMapping("/add")
-    public int addUser(TUser user){
-        return userService.addUser(user);
-    }
 
-    @ResponseBody
-    @GetMapping("/all")
-    public Object findAllUser(
-            @RequestParam(name = "pageNum", required = false, defaultValue = "1")
-                    int pageNum,
-            @RequestParam(name = "pageSize", required = false, defaultValue = "10")
-                    int pageSize){
-        return userService.findAllUser(pageNum,pageSize);
-    }
 
     @ResponseBody
     @GetMapping("/allWx")
@@ -36,9 +21,9 @@ public class UserController {
         return userService.findWxUser();
     }
 
+
+    //TODO 写接口，根据用户OpenId返回信息， 用Restful
 //    @ApiOperation(value ="Render to user")
-
-
 //    @ResponseBody
 //    @GetMapping
 

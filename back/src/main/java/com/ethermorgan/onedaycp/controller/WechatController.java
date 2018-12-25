@@ -2,6 +2,8 @@ package com.ethermorgan.onedaycp.controller;
 
 
 import com.ethermorgan.onedaycp.dto.WxUserInfoReceived;
+import com.ethermorgan.onedaycp.model.UserInfo;
+import com.ethermorgan.onedaycp.model.WxUserInfo;
 import com.ethermorgan.onedaycp.service.UserService;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -18,6 +20,7 @@ import com.alibaba.fastjson.JSONObject;
 
 
 import java.net.URLEncoder;
+import java.util.List;
 
 /**
  * @author zhuenbang
@@ -68,7 +71,16 @@ public class WechatController {
             WxMpUser wxMpUser = wxMpService.oauth2getUserInfo(wxMpOAuth2AccessToken, null);
             String wxMpUserStr = JSONObject.toJSONString(wxMpUser);
             WxUserInfoReceived wxUserInfoReceived = (WxUserInfoReceived) JSONObject.parseObject(wxMpUserStr, WxUserInfoReceived.class);
-            userService.storeWxUserInfo(wxUserInfoReceived);
+            List<WxUserInfo> wxUserInfoList = userService.selectWxUserByOpenId(wxUserInfoReceived.getOpenId());
+            if (wxUserInfoList.size() == 0) {
+                userService.storeWxUserInfo(wxUserInfoReceived);
+            }
+
+            List<UserInfo> userInfoList = userService.selectUserInfoByOpenId(wxUserInfoReceived.getOpenId());
+            if (userInfoList.size() == 0) {
+                userService.storeUserInfo(wxUserInfoReceived);
+            }
+
             System.out.println(wxMpUser.toString());
             logger.debugv("【微信网页授权获】获取用户信息：{}", wxMpUser);
         } catch (WxErrorException e) {
@@ -77,7 +89,5 @@ public class WechatController {
         }
         return "redirect:" + returnUrl;
     }
-
-
 
 }

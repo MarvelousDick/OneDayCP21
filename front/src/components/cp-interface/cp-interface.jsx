@@ -58,10 +58,10 @@ class CpInterface extends React.Component {
                         // paddingRight: '10%'
                     }}>
                         {/*<UserProfile/>*/}
-                        {/*<NewUserProfile/>*/}
+                        <NewUserProfile/>
                         {/*<Match/>*/}
                         {/*<TestMatch/>*/}
-                        <Myself/>
+                        {/*<Myself/>*/}
                     </div>
                     <div style={{
                         bottom: '0px',
