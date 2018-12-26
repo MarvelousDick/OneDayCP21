@@ -1,3 +1,81 @@
+GET http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T125000.200.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124809.200.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124552.404.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124536.404.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124407.404.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/test/hello
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124329.200.txt
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/user/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124210.404.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/api/user/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124120.404.json
+
+###
+
+GET http://oneweekcpuni.mynatapp.cc/user/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-27T124039.200.html
+
+###
+
 GET http://oneweekcpuni.mynatapp.cc/api/test/match?pageNum=1&pageSize=2&userName=yang
 Accept: */*
 Cache-Control: no-cache

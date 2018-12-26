@@ -15,7 +15,7 @@ public class OnedaycpApplicationTests {
     @Test
     public void contextLoads() {
 
-//        wxUserInfoMapper.selectByPrimaryKey("666");
+        wxUserInfoMapper.selectByPrimaryKey("666");
 
     }
 
