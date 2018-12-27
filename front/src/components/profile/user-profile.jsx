@@ -1,7 +1,8 @@
 import React from 'react'
 import connect from "react-redux/es/connect/connect";
 import {DatePicker, SelectField, TextField} from "react-md";
-import {changeUserProfile} from '../../redux/actions'
+import {changeMatcherProfile, changeUserProfile} from '../../redux/actions'
+import axios from "axios";
 
 class UserProfile extends React.Component {
 
@@ -10,6 +11,20 @@ class UserProfile extends React.Component {
         this.state = {
             userProfile: this.props.userProfile
         };
+    }
+
+    componentDidMount() {
+        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
+            .then(
+                json => {
+                    changeUserProfile(json.data.data);
+                    console.log(json.data.data);
+                    this.setState({
+                        userProfile: json.data.data
+                    })
+                }
+
+            )
     }
 
     handleChange = (stateName) => (e) => {
@@ -35,7 +50,7 @@ class UserProfile extends React.Component {
                 label: '昵称',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.nickName,
+                value:  this.state.userProfile.nickName || "",
                 onChange: this.handleChange('nickName'),
                 fullWidth: true
             }, {
@@ -44,7 +59,7 @@ class UserProfile extends React.Component {
                 label: '你的性别',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.sex,
+                value: this.state.userProfile.sex || "",
                 onChange: this.handleChange('sex'),
                 fullWidth: true
             }, {
@@ -53,7 +68,7 @@ class UserProfile extends React.Component {
                 label: '期望中TA的性别',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.matchSex,
+                value: this.state.userProfile.matchSex || "",
                 onChange: this.handleChange('matchSex'),
                 fullWidth: true
             }, {
@@ -62,7 +77,7 @@ class UserProfile extends React.Component {
                 label: '生日',
                 locales: 'zh-CN',
                 className: 'md-cell',
-                value: this.state.userProfile.birthday,
+                value: this.state.userProfile.birthday || "",
                 onChange: this.handleChange('birthday'),
                 displayMode: true
             }, {
@@ -71,7 +86,7 @@ class UserProfile extends React.Component {
                 label: '微信号',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.wechatAccount,
+                value: this.state.userProfile.wechatAccount || "",
                 onChange: this.handleChange('wechatAccount'),
                 fullWidth: true
             }, {
@@ -80,7 +95,7 @@ class UserProfile extends React.Component {
                 label: '大学',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.university,
+                value: this.state.userProfile.university || "",
                 onChange: this.handleChange('university'),
                 fullWidth: true
             }, {
@@ -88,7 +103,7 @@ class UserProfile extends React.Component {
                 id: 'major',
                 label: '专业',
                 lineDirection: 'center',
-                className: 'md-cell md-cell--bottom',
+                className: 'md-cell md-cell--bottom' || "",
                 value: this.state.userProfile.major,
                 onChange: this.handleChange('major'),
                 fullWidth: true

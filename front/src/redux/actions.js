@@ -50,7 +50,6 @@ export const receiveMatcherProfile = () => {
     return dispatch => {
         axios.get('https://randomuser.me/api/?results=10&inc=name,registered&nat=fr')
             .then(json => {
-                console.log(999);
                 const initMatcherProfile = {
                     nickName: "nicky000",
                     photo: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1608431072,669449145&fm=27&gp=0.jpg",

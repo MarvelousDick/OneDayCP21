@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 import BottomBar from '../interface-components/bottom-bar'
 import UserProfile from '../profile/user-profile'
 import TestComponent3 from '../test-component/test-component3'
-import {getUserInfo} from '../../redux/actions'
+import {getUserInfo, changeMatcherProfile} from '../../redux/actions'
 
 import NewUserProfile from '../profile/new-user-profile'
 import Match from '../match/match'
@@ -34,8 +34,11 @@ class CpInterface extends React.Component {
         // this.props.getUserInfo(a)
         // axios.get('https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxcb6afee676d68aa8&redirect_uri=http%3a%2f%2foneweekcpuni.mynatapp.cc%2f&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect')
         //     .then(json => console.log(json))
-        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
-            .then(json => console.log(json))
+
+        // axios.get('http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
+        //     .then(
+        //         json => changeMatcherProfile(json.data.data)
+        //     )
     }
 
     render() {
@@ -90,5 +93,5 @@ CpInterface.propTypes = {
 
 export default connect(
     state => ({userType: state.userType}),
-    {getUserInfo}
+    {getUserInfo, changeMatcherProfile}
 )(withStyles(styles)(CpInterface));
