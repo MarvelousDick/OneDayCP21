@@ -23,7 +23,6 @@ class UserProfile extends React.Component {
                         userProfile: json.data.data
                     })
                 }
-
             )
     }
 
@@ -35,8 +34,19 @@ class UserProfile extends React.Component {
             userProfile: userProfile
         });
 
-        this.props.changeUserProfile(userProfile);
-        console.log(this.props.userProfile)
+        console.log(userProfile);
+
+        this.props.changeUserProfile(userProfile).then(
+            console.log(this.props.userProfile)
+        );
+
+    };
+
+    transNullValue = (value) => {
+        if (value == null) {
+            return "";
+        }
+        return value;
     };
 
     render() {
@@ -50,7 +60,7 @@ class UserProfile extends React.Component {
                 label: '昵称',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value:  this.state.userProfile.nickName || "",
+                value: this.transNullValue(this.state.userProfile.nickName),
                 onChange: this.handleChange('nickName'),
                 fullWidth: true
             }, {
@@ -59,7 +69,7 @@ class UserProfile extends React.Component {
                 label: '你的性别',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.sex || "",
+                value: this.transNullValue(this.state.userProfile.sex),
                 onChange: this.handleChange('sex'),
                 fullWidth: true
             }, {
@@ -68,7 +78,7 @@ class UserProfile extends React.Component {
                 label: '期望中TA的性别',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.matchSex || "",
+                value: this.transNullValue(this.state.userProfile.matchSex),
                 onChange: this.handleChange('matchSex'),
                 fullWidth: true
             }, {
@@ -77,7 +87,7 @@ class UserProfile extends React.Component {
                 label: '生日',
                 locales: 'zh-CN',
                 className: 'md-cell',
-                value: this.state.userProfile.birthday || "",
+                value: this.transNullValue(this.state.userProfile.birthday),
                 onChange: this.handleChange('birthday'),
                 displayMode: true
             }, {
@@ -86,7 +96,7 @@ class UserProfile extends React.Component {
                 label: '微信号',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.wechatAccount || "",
+                value: this.transNullValue(this.state.userProfile.wechatAccount),
                 onChange: this.handleChange('wechatAccount'),
                 fullWidth: true
             }, {
@@ -95,7 +105,7 @@ class UserProfile extends React.Component {
                 label: '大学',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom',
-                value: this.state.userProfile.university || "",
+                value: this.transNullValue(this.state.userProfile.university),
                 onChange: this.handleChange('university'),
                 fullWidth: true
             }, {
@@ -104,7 +114,7 @@ class UserProfile extends React.Component {
                 label: '专业',
                 lineDirection: 'center',
                 className: 'md-cell md-cell--bottom' || "",
-                value: this.state.userProfile.major,
+                value: this.transNullValue(this.state.userProfile.major),
                 onChange: this.handleChange('major'),
                 fullWidth: true
             }
