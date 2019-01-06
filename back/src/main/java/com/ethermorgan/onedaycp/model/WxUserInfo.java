@@ -5,9 +5,9 @@ import java.util.Date;
 public class WxUserInfo {
     private String id;
 
-    private String openid;
+    private String openId;
 
-    private String nickname;
+    private String nickName;
 
     private Short sex;
 
@@ -17,11 +17,11 @@ public class WxUserInfo {
 
     private String country;
 
-    private String headimgurl;
+    private String headimgUrl;
 
-    private String unionid;
+    private String unionId;
 
-    private Date createtime;
+    private Date createTime;
 
     public String getId() {
         return id;
@@ -31,20 +31,20 @@ public class WxUserInfo {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getOpenid() {
-        return openid;
+    public String getOpenId() {
+        return openId;
     }
 
-    public void setOpenid(String openid) {
-        this.openid = openid == null ? null : openid.trim();
+    public void setOpenId(String openId) {
+        this.openId = openId == null ? null : openId.trim();
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname == null ? null : nickname.trim();
+    public void setNickName(String nickName) {
+        this.nickName = nickName == null ? null : nickName.trim();
     }
 
     public Short getSex() {
@@ -79,27 +79,27 @@ public class WxUserInfo {
         this.country = country == null ? null : country.trim();
     }
 
-    public String getHeadimgurl() {
-        return headimgurl;
+    public String getHeadimgUrl() {
+        return headimgUrl;
     }
 
-    public void setHeadimgurl(String headimgurl) {
-        this.headimgurl = headimgurl == null ? null : headimgurl.trim();
+    public void setHeadimgUrl(String headimgUrl) {
+        this.headimgUrl = headimgUrl == null ? null : headimgUrl.trim();
     }
 
-    public String getUnionid() {
-        return unionid;
+    public String getUnionId() {
+        return unionId;
     }
 
-    public void setUnionid(String unionid) {
-        this.unionid = unionid == null ? null : unionid.trim();
+    public void setUnionId(String unionId) {
+        this.unionId = unionId == null ? null : unionId.trim();
     }
 
-    public Date getCreatetime() {
-        return createtime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

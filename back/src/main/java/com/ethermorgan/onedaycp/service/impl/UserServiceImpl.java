@@ -10,11 +10,9 @@ import com.ethermorgan.onedaycp.model.UserInfoExample;
 import com.ethermorgan.onedaycp.model.WxUserInfo;
 import com.ethermorgan.onedaycp.model.WxUserInfoExample;
 import com.ethermorgan.onedaycp.service.UserService;
+import com.ethermorgan.onedaycp.util.SyncDataUtil;
 import com.ethermorgan.onedaycp.util.TransUtils;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -24,7 +22,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-//@Service(value = "userService")
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -39,6 +36,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private TransUtils transUtils;
+
+    @Autowired
+    private SyncDataUtil syncDataUtil;
 
     @Override
     public WxUserInfo findWxUser() {
@@ -64,40 +64,49 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<WxUserInfo> selectWxUserByOpenId(String openId) {
         WxUserInfoExample wxUserInfoExample = new WxUserInfoExample();
-        wxUserInfoExample.createCriteria().andOpenidEqualTo(openId);
+        wxUserInfoExample.createCriteria().andOpenIdEqualTo(openId);
         List<WxUserInfo> wxUserList = wxUserInfoMapper.selectByExample(wxUserInfoExample);
         return wxUserList;
     }
 
     @Override
-    public List<UserInfo> selectUserInfoByOpenId(String openId){
+    public List<UserInfo> selectUserInfoByOpenId(String openId) {
         UserInfoExample userInfoExample = new UserInfoExample();
-        userInfoExample.createCriteria().andOpenidEqualTo(openId);
+        userInfoExample.createCriteria().andOpenIdEqualTo(openId);
         List<UserInfo> userInfoList = userInfoMapper.selectByExample(userInfoExample);
         return userInfoList;
     }
 
+    @Override
+    public int changeUserInfo(String openId, UserInfo userInfo) {
+        UserInfoExample userInfoExample = new UserInfoExample();
+        userInfoExample.createCriteria().andOpenIdEqualTo(openId);
+        userInfo.setUserStatus((short) 2);
+        return userInfoMapper.updateByExample(userInfo, userInfoExample);
+    }
+
     private void populateUserInfoFields(WxUserInfoReceived wxUserInfoReceived, UserInfo userInfo) {
         userInfo.setId(UUID.randomUUID().toString());
-        userInfo.setOpenid(wxUserInfoReceived.getOpenId());
-        userInfo.setNickname(wxUserInfoReceived.getNickname());
-        userInfo.setSex((short) (int) wxUserInfoReceived.getSex());
-        userInfo.setUserstatus((short) 1);
-        userInfo.setCreatetime(new Date());
+        userInfo.setOpenId(wxUserInfoReceived.getOpenId());
+        userInfo.setNickName(wxUserInfoReceived.getNickname());
+        userInfo.setSex(syncDataUtil.transSex(wxUserInfoReceived.getSex()));
+        userInfo.setMatchSex(syncDataUtil.getDefaultMatchSex(wxUserInfoReceived.getSex()));
+        userInfo.setHeadimgUrl(wxUserInfoReceived.getHeadImgUrl());
+        userInfo.setUserStatus((short) 1);
+        userInfo.setCreateTime(new Date());
     }
 
     private void populateWXUserInfoFields(WxUserInfoReceived wxUserInfoReceived, WxUserInfo wxUserInfo) {
         wxUserInfo.setId(UUID.randomUUID().toString());
-        wxUserInfo.setOpenid(wxUserInfoReceived.getOpenId());
-        wxUserInfo.setNickname(wxUserInfoReceived.getNickname());
+        wxUserInfo.setOpenId(wxUserInfoReceived.getOpenId());
+        wxUserInfo.setNickName(wxUserInfoReceived.getNickname());
         wxUserInfo.setSex((short) (int) wxUserInfoReceived.getSex());
         wxUserInfo.setProvince(wxUserInfoReceived.getProvince());
         wxUserInfo.setCity(wxUserInfoReceived.getCity());
         wxUserInfo.setCountry(wxUserInfoReceived.getCountry());
-        wxUserInfo.setHeadimgurl(wxUserInfoReceived.getHeadImgUrl());
-        wxUserInfo.setUnionid(wxUserInfoReceived.getUnionId());
-        wxUserInfo.setCreatetime(new Date());
+        wxUserInfo.setHeadimgUrl(wxUserInfoReceived.getHeadImgUrl());
+        wxUserInfo.setUnionId(wxUserInfoReceived.getUnionId());
+        wxUserInfo.setCreateTime(new Date());
     }
-
 
 }

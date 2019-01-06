@@ -1,6 +1,7 @@
 package com.ethermorgan.onedaycp.controller;
 
 import com.ethermorgan.onedaycp.dto.OperationResultDto;
+import com.ethermorgan.onedaycp.dto.request.UserInfoReq;
 import com.ethermorgan.onedaycp.model.UserInfo;
 import com.ethermorgan.onedaycp.service.UserService;
 import io.swagger.annotations.ApiOperation;
@@ -25,10 +26,8 @@ public class UserController {
         return userService.findWxUser();
     }
 
-
-    //TODO 写接口，根据用户OpenId返回信息， 用Restful
     @ApiOperation(value = "Return User Infomation")
-    @RequestMapping(value = "/getUserInfo/{openID}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/UserInfo/{openID}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public @ResponseBody
     OperationResultDto<UserInfo> getUserInfo(@PathVariable("openID") String openID) {
         OperationResultDto<UserInfo> operationResultDto = new OperationResultDto<>();
@@ -39,6 +38,18 @@ public class UserController {
         } else {
             operationResultDto.setData(userInfoList.get(0));
         }
+        return operationResultDto;
+    }
+
+    @ApiOperation(value = "Receive User Information and Modify")
+    @RequestMapping(value = "/UserInfo/{openID}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public @ResponseBody
+    OperationResultDto<UserInfo> changeUserInfo(@PathVariable("openID") String openID, @RequestBody UserInfo userInfo) {
+        OperationResultDto<UserInfo> operationResultDto = new OperationResultDto<>();
+        int modifiedColumn = userService.changeUserInfo(openID, userInfo);
+        operationResultDto.setResultMsg("Updated " + modifiedColumn + " Message");
+        operationResultDto.setReturnCode(0);
+        operationResultDto.setResult(true);
         return operationResultDto;
     }
 

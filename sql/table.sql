@@ -1,4 +1,4 @@
-create schema if not exists onedaycp collate utf8_general_ci;
+create schema if not exists onedaycp ;
 
 create table if not exists match_game
 (
@@ -16,19 +16,20 @@ create table if not exists t_user
 	phone varchar(255) not null
 );
 
+select schema onedaycp;
+
 create table if not exists wx_user_info
 (
-	ID varchar(128) not null,
-	OpenID varchar(128) null,
-	NickName varchar(58) null,
-	Sex smallint(6) null,
-	Province varchar(128) null,
-	City varchar(128) null,
-	Country varchar(128) null,
-	HeadimgURL varchar(256) null,
-	Unionid varchar(128) null,
-	CreateTime datetime null,
-	constraint wxuserinfo_ID_uindex
+	id varchar(128) not null,
+	open_id varchar(128) null,
+	nick_name varchar(58) null,
+	sex smallint(6) null,
+	province varchar(128) null,
+	city varchar(128) null,
+	country varchar(128) null,
+	headimg_url varchar(256) null,
+	union_id varchar(128) null,
+	create_time datetime null,
 		unique (ID)
 );
 
@@ -37,18 +38,20 @@ alter table wx_user_info
 	add primary key (ID);
 
 
-
 create table if not exists user_info
 (
-	ID varchar(128) not null,
-	OpenID varchar(128) null,
-	NickName varchar(58) null,
-	Sex smallint(6) null,
-	Birthday datetime null,
-  WechatID varchar(128) null,
-  University varchar(128) null,
-  Major varchar(128) null,
-	CreateTime datetime null,
+	id varchar(128) not null,
+	open_id varchar(128) null,
+	nick_name varchar(58) null,
+	sex smallint(6) null,
+	match_sex smallint(6) null,
+	birthday datetime null,
+  wechat_id varchar(128) null,
+  university varchar(128) null,
+  major varchar(128) null,
+  headimg_url varchar(256) null,
+  user_status varchar(256) null,
+	create_time datetime null,
 );
 
 

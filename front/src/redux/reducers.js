@@ -46,14 +46,18 @@ function userType(state = initUserType, action) {
 }
 
 const initUserProfile = {
-    nickName: "nick",
-    photo: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1608431072,669449145&fm=27&gp=0.jpg",
-    sex: "sex8",
-    matchSex: "sex9",
-    birthday: "1990-01-01",
-    wechatAccount: "temash",
-    university: "上海大学",
-    major: "电气工程及其自动化"
+    "birthday": null,
+    "createtime": null,
+    "headimgUrl": null,
+    "id": null,
+    "major": null,
+    "matchSex": null,
+    "nickName": null,
+    "openId": null,
+    "sex": null,
+    "university": "上海大学",
+    "userStatus": null,
+    "wechatId": null
 };
 
 function userProfile(state = initUserProfile, action) {

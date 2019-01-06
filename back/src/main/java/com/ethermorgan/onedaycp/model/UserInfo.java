@@ -5,23 +5,27 @@ import java.util.Date;
 public class UserInfo {
     private String id;
 
-    private String openid;
+    private String openId;
 
-    private String nickname;
+    private String nickName;
 
     private Short sex;
 
+    private Short matchSex;
+
     private Date birthday;
 
-    private String wechatid;
+    private String wechatId;
 
     private String university;
 
     private String major;
 
-    private Short userstatus;
+    private String headimgUrl;
 
-    private Date createtime;
+    private Short userStatus;
+
+    private Date createTime;
 
     public String getId() {
         return id;
@@ -31,20 +35,20 @@ public class UserInfo {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getOpenid() {
-        return openid;
+    public String getOpenId() {
+        return openId;
     }
 
-    public void setOpenid(String openid) {
-        this.openid = openid == null ? null : openid.trim();
+    public void setOpenId(String openId) {
+        this.openId = openId == null ? null : openId.trim();
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname == null ? null : nickname.trim();
+    public void setNickName(String nickName) {
+        this.nickName = nickName == null ? null : nickName.trim();
     }
 
     public Short getSex() {
@@ -55,6 +59,14 @@ public class UserInfo {
         this.sex = sex;
     }
 
+    public Short getMatchSex() {
+        return matchSex;
+    }
+
+    public void setMatchSex(Short matchSex) {
+        this.matchSex = matchSex;
+    }
+
     public Date getBirthday() {
         return birthday;
     }
@@ -63,12 +75,12 @@ public class UserInfo {
         this.birthday = birthday;
     }
 
-    public String getWechatid() {
-        return wechatid;
+    public String getWechatId() {
+        return wechatId;
     }
 
-    public void setWechatid(String wechatid) {
-        this.wechatid = wechatid == null ? null : wechatid.trim();
+    public void setWechatId(String wechatId) {
+        this.wechatId = wechatId == null ? null : wechatId.trim();
     }
 
     public String getUniversity() {
@@ -87,19 +99,27 @@ public class UserInfo {
         this.major = major == null ? null : major.trim();
     }
 
-    public Short getUserstatus() {
-        return userstatus;
+    public String getHeadimgUrl() {
+        return headimgUrl;
     }
 
-    public void setUserstatus(Short userstatus) {
-        this.userstatus = userstatus;
+    public void setHeadimgUrl(String headimgUrl) {
+        this.headimgUrl = headimgUrl == null ? null : headimgUrl.trim();
     }
 
-    public Date getCreatetime() {
-        return createtime;
+    public Short getUserStatus() {
+        return userStatus;
     }
 
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
+    public void setUserStatus(Short userStatus) {
+        this.userStatus = userStatus;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

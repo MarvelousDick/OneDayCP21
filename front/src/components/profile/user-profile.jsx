@@ -14,7 +14,7 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
+        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/UserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
             .then(
                 json => {
                     changeUserProfile(json.data.data);
@@ -34,11 +34,10 @@ class UserProfile extends React.Component {
             userProfile: userProfile
         });
 
-        console.log(userProfile);
+        // console.log(userProfile);
 
-        this.props.changeUserProfile(userProfile).then(
-            console.log(this.props.userProfile)
-        );
+        this.props.changeUserProfile(userProfile);
+        console.log(this.props.userProfile)
 
     };
 
@@ -51,7 +50,13 @@ class UserProfile extends React.Component {
 
     render() {
 
-        const sexItems = ['男', '女'];
+        const sexItems = [{
+            value: 1,
+            label: '男',
+        }, {
+            value: 2,
+            label: '女',
+        }];
 
         const textFieldList = [
             {
@@ -71,6 +76,9 @@ class UserProfile extends React.Component {
                 className: 'md-cell md-cell--bottom',
                 value: this.transNullValue(this.state.userProfile.sex),
                 onChange: this.handleChange('sex'),
+                menuItems: sexItems,
+                itemLabel: 'label',
+                itemValue: 'value',
                 fullWidth: true
             }, {
                 fieldType: 'selectField',
@@ -80,6 +88,9 @@ class UserProfile extends React.Component {
                 className: 'md-cell md-cell--bottom',
                 value: this.transNullValue(this.state.userProfile.matchSex),
                 onChange: this.handleChange('matchSex'),
+                menuItems: sexItems,
+                itemLabel: 'label',
+                itemValue: 'value',
                 fullWidth: true
             }, {
                 fieldType: 'datePicker',
@@ -145,7 +156,9 @@ class UserProfile extends React.Component {
                             className={textFieldList[i].className}
                             value={textFieldList[i].value}
                             onChange={textFieldList[i].onChange}
-                            menuItems={sexItems}
+                            menuItems={textFieldList[i].menuItems}
+                            itemLabel={textFieldList[i].itemLabel}
+                            itemValue={textFieldList[i].itemValue}
                             position={SelectField.Positions.BELOW}
                         />
                     )
