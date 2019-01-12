@@ -27,7 +27,7 @@ class NewUserProfile extends React.Component {
 
         axios({
             method: 'post',
-            url: 'http://oneweekcpuni.mynatapp.cc/api/user/UserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA',
+            url: 'http://oneweekcpuni.mynatapp.cc/api/user/userInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA',
             data: userInfo,
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'

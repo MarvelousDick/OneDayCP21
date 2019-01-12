@@ -7,7 +7,7 @@
     <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="SMALLINT" />
     <result column="match_sex" property="matchSex" jdbcType="SMALLINT" />
-    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="birthday" property="birthday" jdbcType="DATE" />
     <result column="wechat_id" property="wechatId" jdbcType="VARCHAR" />
     <result column="university" property="university" jdbcType="VARCHAR" />
     <result column="major" property="major" jdbcType="VARCHAR" />
@@ -115,7 +115,7 @@
       headimg_url, user_status, create_time
       )
     values (#{id,jdbcType=VARCHAR}, #{openId,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
-      #{sex,jdbcType=SMALLINT}, #{matchSex,jdbcType=SMALLINT}, #{birthday,jdbcType=TIMESTAMP}, 
+      #{sex,jdbcType=SMALLINT}, #{matchSex,jdbcType=SMALLINT}, #{birthday,jdbcType=DATE}, 
       #{wechatId,jdbcType=VARCHAR}, #{university,jdbcType=VARCHAR}, #{major,jdbcType=VARCHAR}, 
       #{headimgUrl,jdbcType=VARCHAR}, #{userStatus,jdbcType=SMALLINT}, #{createTime,jdbcType=TIMESTAMP}
       )
@@ -177,7 +177,7 @@
         #{matchSex,jdbcType=SMALLINT},
       </if>
       <if test="birthday != null" >
-        #{birthday,jdbcType=TIMESTAMP},
+        #{birthday,jdbcType=DATE},
       </if>
       <if test="wechatId != null" >
         #{wechatId,jdbcType=VARCHAR},
@@ -224,7 +224,7 @@
         match_sex = #{record.matchSex,jdbcType=SMALLINT},
       </if>
       <if test="record.birthday != null" >
-        birthday = #{record.birthday,jdbcType=TIMESTAMP},
+        birthday = #{record.birthday,jdbcType=DATE},
       </if>
       <if test="record.wechatId != null" >
         wechat_id = #{record.wechatId,jdbcType=VARCHAR},
@@ -256,7 +256,7 @@
       nick_name = #{record.nickName,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=SMALLINT},
       match_sex = #{record.matchSex,jdbcType=SMALLINT},
-      birthday = #{record.birthday,jdbcType=TIMESTAMP},
+      birthday = #{record.birthday,jdbcType=DATE},
       wechat_id = #{record.wechatId,jdbcType=VARCHAR},
       university = #{record.university,jdbcType=VARCHAR},
       major = #{record.major,jdbcType=VARCHAR},
@@ -283,7 +283,7 @@
         match_sex = #{matchSex,jdbcType=SMALLINT},
       </if>
       <if test="birthday != null" >
-        birthday = #{birthday,jdbcType=TIMESTAMP},
+        birthday = #{birthday,jdbcType=DATE},
       </if>
       <if test="wechatId != null" >
         wechat_id = #{wechatId,jdbcType=VARCHAR},
@@ -312,7 +312,7 @@
       nick_name = #{nickName,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=SMALLINT},
       match_sex = #{matchSex,jdbcType=SMALLINT},
-      birthday = #{birthday,jdbcType=TIMESTAMP},
+      birthday = #{birthday,jdbcType=DATE},
       wechat_id = #{wechatId,jdbcType=VARCHAR},
       university = #{university,jdbcType=VARCHAR},
       major = #{major,jdbcType=VARCHAR},

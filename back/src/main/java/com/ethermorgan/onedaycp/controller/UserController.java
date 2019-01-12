@@ -2,6 +2,7 @@ package com.ethermorgan.onedaycp.controller;
 
 import com.ethermorgan.onedaycp.dto.OperationResultDto;
 import com.ethermorgan.onedaycp.dto.request.UserInfoReq;
+import com.ethermorgan.onedaycp.dto.response.UserInfoResp;
 import com.ethermorgan.onedaycp.model.UserInfo;
 import com.ethermorgan.onedaycp.service.UserService;
 import io.swagger.annotations.ApiOperation;
@@ -27,22 +28,18 @@ public class UserController {
     }
 
     @ApiOperation(value = "Return User Infomation")
-    @RequestMapping(value = "/UserInfo/{openID}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/userInfo/{openID}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public @ResponseBody
-    OperationResultDto<UserInfo> getUserInfo(@PathVariable("openID") String openID) {
-        OperationResultDto<UserInfo> operationResultDto = new OperationResultDto<>();
-        List<UserInfo> userInfoList = userService.selectUserInfoByOpenId(openID);
-        if (userInfoList.size() == 0) {
-            operationResultDto.setResult(false);
-            operationResultDto.setResultMsg("No Result");
-        } else {
-            operationResultDto.setData(userInfoList.get(0));
-        }
+    OperationResultDto<UserInfoResp> getUserInfo(@PathVariable("openID") String openID) {
+        OperationResultDto<UserInfoResp> operationResultDto = new OperationResultDto<>();
+        UserInfoResp userInfoResp = userService.getUserInfoRespByOpenId(openID);
+        operationResultDto.setResult(true);
+        operationResultDto.setData(userInfoResp);
         return operationResultDto;
     }
 
     @ApiOperation(value = "Receive User Information and Modify")
-    @RequestMapping(value = "/UserInfo/{openID}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/userInfo/{openID}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public @ResponseBody
     OperationResultDto<UserInfo> changeUserInfo(@PathVariable("openID") String openID, @RequestBody UserInfo userInfo) {
         OperationResultDto<UserInfo> operationResultDto = new OperationResultDto<>();

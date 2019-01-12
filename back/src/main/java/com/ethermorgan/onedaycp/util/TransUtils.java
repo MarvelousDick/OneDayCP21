@@ -35,9 +35,9 @@ public class TransUtils {
     /**
      * 字符串转日期格式，如果出错返回null
      */
-    public Date stringToDate(String inputString, String dateformat) {
+    public Date stringToDate(String inputString, String dateFormat) {
         try {
-            SimpleDateFormat sdf = buildDateFormat(dateformat);
+            SimpleDateFormat sdf = buildDateFormat(dateFormat);
             Date result = sdf.parse(inputString);
             Assert.notNull(result, "Null result date");
 
@@ -46,9 +46,9 @@ public class TransUtils {
             if (result.getTime() >= minTime && result.getTime() <= maxTime)
                 return result;
 
-            if (dateformat.contains("yyyy")) {
+            if (dateFormat.contains("yyyy")) {
                 // 尝试把4位年份改为2位的再转一次
-                return stringToDate(inputString, dateformat.replace("yyyy", "yy"));
+                return stringToDate(inputString, dateFormat.replace("yyyy", "yy"));
             } else {
                 return null;
             }
@@ -56,6 +56,18 @@ public class TransUtils {
             return null;
         }
     }
+
+    public String dateToString(Date date, String dateFormat) {
+
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+            return sdf.format(date);
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
 
     /* 判断OrderType  normal: id = 1, credit: id = 2, gift: id = 3*/
     public short judgeOrderType(String OrderType, int credit) {
@@ -251,15 +263,14 @@ public class TransUtils {
         }
     }
 
-    public String getNowDate(){
-        String temp_str="";
+    public String getNowDate() {
+        String temp_str = "";
         Date dt = new Date();
         //最后的aa表示“上午”或“下午”    HH表示24小时制    如果换成hh表示12小时制
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss aa");
-        temp_str=sdf.format(dt);
+        temp_str = sdf.format(dt);
         return temp_str;
     }
-
 
 
 }

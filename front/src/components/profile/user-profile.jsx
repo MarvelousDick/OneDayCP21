@@ -3,6 +3,7 @@ import connect from "react-redux/es/connect/connect";
 import {DatePicker, SelectField, TextField} from "react-md";
 import {changeMatcherProfile, changeUserProfile} from '../../redux/actions'
 import axios from "axios";
+import DateFormat from 'dateformat-util'
 
 class UserProfile extends React.Component {
 
@@ -14,14 +15,14 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/UserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
+        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/userInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
             .then(
                 json => {
-                    changeUserProfile(json.data.data);
-                    console.log(json.data.data);
+                    this.props.changeUserProfile(json.data.data);
                     this.setState({
                         userProfile: json.data.data
-                    })
+                    });
+                    console.log(this.props.userProfile);
                 }
             )
     }
@@ -33,13 +34,24 @@ class UserProfile extends React.Component {
         this.setState({
             userProfile: userProfile
         });
-
         // console.log(userProfile);
+        this.props.changeUserProfile(userProfile);
+        console.log(this.props.userProfile)
+    };
+
+
+    handleChangeDate = (stateName) => (e) => {
+        let {userProfile} = this.state;
+        let time = new Date(e);
+        userProfile[stateName] = DateFormat.format(time, 'yyyy-MM-dd');
+        this.setState({
+            userProfile: userProfile
+        });
 
         this.props.changeUserProfile(userProfile);
         console.log(this.props.userProfile)
-
     };
+
 
     transNullValue = (value) => {
         if (value == null) {
@@ -99,7 +111,7 @@ class UserProfile extends React.Component {
                 locales: 'zh-CN',
                 className: 'md-cell',
                 value: this.transNullValue(this.state.userProfile.birthday),
-                onChange: this.handleChange('birthday'),
+                onChange: this.handleChangeDate('birthday'),
                 displayMode: true
             }, {
                 fieldType: 'textField',

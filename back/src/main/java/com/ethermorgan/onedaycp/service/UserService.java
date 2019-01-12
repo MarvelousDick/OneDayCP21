@@ -1,7 +1,9 @@
 package com.ethermorgan.onedaycp.service;
 
 
+import com.ethermorgan.onedaycp.dto.OperationResultDto;
 import com.ethermorgan.onedaycp.dto.WxUserInfoReceived;
+import com.ethermorgan.onedaycp.dto.response.UserInfoResp;
 import com.ethermorgan.onedaycp.model.UserInfo;
 import com.ethermorgan.onedaycp.model.WxUserInfo;
 import org.springframework.stereotype.Component;
@@ -23,6 +25,8 @@ public interface UserService {
     List<WxUserInfo> selectWxUserByOpenId(String openId);
 
     List<UserInfo> selectUserInfoByOpenId(String openId);
+
+    UserInfoResp getUserInfoRespByOpenId(String openId);
 
     int changeUserInfo(String openId, UserInfo userInfo);
 

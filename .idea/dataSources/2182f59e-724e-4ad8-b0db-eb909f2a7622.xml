@@ -1134,7 +1134,7 @@
     </column>
     <column id="284" parent="277" name="birthday">
       <Position>6</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="285" parent="277" name="wechat_id">
