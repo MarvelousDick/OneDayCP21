@@ -6,6 +6,9 @@ import connect from "react-redux/es/connect/connect";
 import {changeUserProfile} from "../../redux/actions";
 import axios from "axios";
 
+import {NavLink} from 'react-router-dom'
+
+
 class NewUserProfile extends React.Component {
 
 
@@ -32,6 +35,8 @@ class NewUserProfile extends React.Component {
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8'
             }
+        }).then(res => {
+            console.log(res.data);
         })
 
     };
@@ -42,11 +47,15 @@ class NewUserProfile extends React.Component {
             <div>
                 <UserProfile/>
                 <div className="buttons__group">
-                    <Button
-                        raised
-                        primary
-                        onClick={this.submitUserProfile}
-                        style={{width: '100%'}}>开始匹配</Button>
+                    <NavLink to="/match">
+                        <Button
+                            raised
+                            primary
+                            onClick={this.submitUserProfile}
+                            style={{width: '100%'}}>
+                            开始匹配
+                        </Button>
+                    </NavLink>
                 </div>
             </div>
         )

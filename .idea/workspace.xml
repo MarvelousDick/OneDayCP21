@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7db4d61-1bd1-4299-b97c-0c8318b45197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/response/UserInfoResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/CommonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2182f59e-724e-4ad8-b0db-eb909f2a7622.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2182f59e-724e-4ad8-b0db-eb909f2a7622.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/components/cp-interface/home-page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/model/UserInfoExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/model/UserInfoExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/TransUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/TransUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/resources/mapper/WxUserInfoMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/me/myself.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/me/myself.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/profile/user-profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/profile/user-profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/tool/nginx/logs/access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/nginx/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/tool/nginx/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/nginx/logs/nginx.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tool/nginx/logs/nginx.pid" afterDir="false" />
@@ -88,14 +81,14 @@
     </checked>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43764704">
+    <splitter split-orientation="horizontal" split-proportion="0.83192635">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="620">
-                  <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+                <state relative-caret-position="320">
+                  <caret line="49" column="54" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -103,16 +96,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/redux/action-types.js">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/front/src/components/profile/user-profile.jsx">
+            <entry file="file://$PROJECT_DIR$/front/src/components/cp-interface/home-page.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+                <state relative-caret-position="432">
+                  <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -121,19 +109,25 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx">
+            <entry file="file://$PROJECT_DIR$/front/src/components/me/myself.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+                <state relative-caret-position="-38">
+                  <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/yarn.lock">
+            <entry file="file://$PROJECT_DIR$/front/src/components/profile/user-profile.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1420">
-                  <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+                <state relative-caret-position="340">
+                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -211,56 +205,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/WechatController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1180">
-                  <caret line="78" column="67" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
+                <state relative-caret-position="574">
+                  <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="207">
-                  <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/impl/UserServiceImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1420">
-                  <caret line="97" column="29" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/user_info">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/wx_user_info">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -313,10 +265,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>java.lang.Integer</find>
-      <find>spring-boot-starter-web</find>
-      <find>web</find>
-      <find>TUserMapper.BASE_COLUMN</find>
       <find>BASE_COLUMN</find>
       <find>app</find>
       <find>mysql-connector-java-</find>
@@ -343,9 +291,14 @@
       <find>date</find>
       <find>transUtils</find>
       <find>transUtils`</find>
+      <find>userProfile</find>
+      <find>myself</find>
+      <find>port</find>
+      <find>MyselfNew</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
+      <replace>Myself</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Cheng\dev\OnedayCP21\back\src\main\java</dir>
@@ -358,12 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/front/draft/draft7.js" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/WXUserInfoReceived.java" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/transUtils.java" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/mapper/TUserMapper.java" />
-        <option value="$PROJECT_DIR$/front/src/components/me/myself.jsx" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/updateDto.java" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/UpdateDto.java" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/mapper/MatchGameMapper.java" />
         <option value="$PROJECT_DIR$/springboot2-mybatis-demo/src/main/resources/application.yml" />
@@ -384,7 +331,6 @@
         <option value="$PROJECT_DIR$/back/src/test/java/com/ethermorgan/onedaycp/OnedaycpApplicationTests.java" />
         <option value="$PROJECT_DIR$/back/src/test/java/com/ethermorgan/onedaycp/CommonIT.java" />
         <option value="$PROJECT_DIR$/front/src/redux/actions.js" />
-        <option value="$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2182f59e-724e-4ad8-b0db-eb909f2a7622/console.sql" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/SyncDataUtil.java" />
         <option value="$PROJECT_DIR$/back/src/main/resources/generatorConfig.xml" />
@@ -393,7 +339,6 @@
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/mapper/UserInfoMapper.java" />
         <option value="$PROJECT_DIR$/back/pom.xml" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/OnedaycpApplication.java" />
-        <option value="$PROJECT_DIR$/sql/table.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2182f59e-724e-4ad8-b0db-eb909f2a7622/console_1.sql" />
         <option value="$PROJECT_DIR$/front/draft/draft9.json" />
         <option value="$PROJECT_DIR$/front/draft/draft12.js" />
@@ -402,13 +347,21 @@
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/request/UserInfoReq.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/CommonUtils.java" />
-        <option value="$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/TransUtils.java" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/response/UserInfoResp.java" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/UserService.java" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx" />
+        <option value="$PROJECT_DIR$/front/src/index.js" />
+        <option value="$PROJECT_DIR$/sql/table.sql" />
+        <option value="2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/wx_user_info.sql" />
+        <option value="$PROJECT_DIR$/front/src/components/me/myself-new.jsx" />
+        <option value="$PROJECT_DIR$/front/src/components/me/myself.jsx" />
+        <option value="$PROJECT_DIR$/front/src/components/profile/home-page.jsx" />
+        <option value="$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx" />
         <option value="$PROJECT_DIR$/front/src/components/profile/user-profile.jsx" />
+        <option value="$PROJECT_DIR$/front/src/components/cp-interface/home-page.jsx" />
       </list>
     </option>
   </component>
@@ -457,7 +410,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
-    <option name="width" value="3324" />
+    <option name="width" value="3116" />
     <option name="height" value="2112" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -468,8 +421,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -511,16 +464,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="onedaycp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="onedaycp" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
@@ -634,6 +577,38 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="cp-interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="interface-components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="match" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -641,7 +616,13 @@
               <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="test-component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OneDayCP21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneDayCP21" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -662,7 +643,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/weixin-java-mp-demo-springboot/src/main/resources/application.yml" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547055928256" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547656871004" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -686,19 +667,19 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.ethermorgan.onedaycp.mapper" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Cheng\dev\OnedayCP21\back\src\main\resources" />
-      <recent name="C:\Cheng\dev\OnedayCP21\database-test\src\main\resources" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Files\Develop\Code\OneDayCP21\front\src\components\profile" />
       <recent name="C:\Files\Develop\Code\OneDayCP21\back\src\test\java\com\ethermorgan\onedaycp" />
       <recent name="C:\Files\Develop\Code\OneDayCP21\back\src\main\java\com\ethermorgan\onedaycp\dto" />
       <recent name="C:\Files\Develop\Code\OneDayCP21" />
       <recent name="C:\Files\Develop\Code\OneDayCP21\tool\nginx" />
-      <recent name="C:\Cheng\dev\OnedayCP21\weixin-java-mp-demo-springboot\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Cheng\dev\OnedayCP21\back\src\main\resources" />
+      <recent name="C:\Cheng\dev\OnedayCP21\database-test\src\main\resources" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -1365,6 +1346,15 @@
       <workItem from="1547046617273" duration="5492000" />
       <workItem from="1547139578770" duration="668000" />
       <workItem from="1547218285773" duration="807000" />
+      <workItem from="1547279551627" duration="6631000" />
+      <workItem from="1547322433392" duration="311000" />
+      <workItem from="1547338513064" duration="170000" />
+      <workItem from="1547345323072" duration="5888000" />
+      <workItem from="1547389645977" duration="7154000" />
+      <workItem from="1547481819641" duration="3027000" />
+      <workItem from="1547573013560" duration="19000" />
+      <workItem from="1547573087310" duration="1175000" />
+      <workItem from="1547649087709" duration="3240000" />
     </task>
     <task id="LOCAL-00001" summary="Front">
       <created>1546386661576</created>
@@ -1429,7 +1419,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="453233000" />
+    <option name="totallyTimeSpent" value="480848000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1441,10 +1431,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="2216" height="1408" extended-state="0" />
+    <frame x="-7" y="0" width="1745" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11043803" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1761194" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Web" order="3" side_tool="true" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290993" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54011977" weight="0.365416" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3508914" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32927817" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.30424145" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.4994007" weight="0.32820097" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32927817" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32925835" />
+      <window_info anchor="bottom" x="29" y="562" width="2503" height="276" id="Terminal" order="11" sideWeight="0.5449102" weight="0.29771614" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.4550898" side_tool="true" weight="0.26592356" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.44091278" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tail" order="16" />
+      <window_info anchor="bottom" id="Database Console" order="17" sideWeight="0.49820215" weight="0.33115825" />
+      <window_info active="true" anchor="bottom" id="REST Client" order="18" sideWeight="0.66480225" visible="true" weight="0.3873582" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="19" sideWeight="0.49061126" visible="true" weight="0.30831975" />
+      <window_info anchor="bottom" id="SQL Generator" order="20" weight="0.32912844" />
+      <window_info anchor="bottom" id="MyBatis Sql Log" order="21" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.1275783" />
+      <window_info anchor="right" id="Database" order="8" weight="0.13791554" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.10139721" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.13415842" />
+      <window_info anchor="right" id="SciView" order="11" weight="0.2235459" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2658228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Web" order="3" side_tool="true" />
@@ -1463,7 +1497,7 @@
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.4994007" weight="0.32820097" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32927817" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.3298217" />
-      <window_info active="true" anchor="bottom" x="29" y="562" width="2503" height="276" id="Terminal" order="11" sideWeight="0.5449102" visible="true" weight="0.2982885" />
+      <window_info anchor="bottom" x="29" y="562" width="2503" height="276" id="Terminal" order="11" sideWeight="0.5449102" visible="true" weight="0.29771614" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.4550898" side_tool="true" weight="0.26592356" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.44091278" />
       <window_info anchor="bottom" id="TypeScript" order="14" />
@@ -1482,47 +1516,10 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.1275783" />
-      <window_info anchor="right" id="Database" order="8" weight="0.24570367" />
+      <window_info anchor="right" id="Database" order="8" weight="0.15582286" />
       <window_info anchor="right" id="Maven" order="9" weight="0.10139721" />
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.13415842" />
       <window_info anchor="right" id="SciView" order="11" weight="0.2235459" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18587145" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Web" order="3" side_tool="true" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290993" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989321" weight="0.27722773" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32928804" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.3290993" />
-      <window_info anchor="bottom" id="Java Enterprise" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.6693721" visible="true" weight="0.39102042" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50106794" side_tool="true" weight="0.25201288" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="TypeScript" order="14" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Bean Validation" order="4" weight="0.13425647" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.12161349" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.1275783" />
-      <window_info anchor="right" id="Maven" order="10" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1541,59 +1538,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Front" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/dto/OperationResultBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/model/WxUserInfoExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.3.RELEASE/spring-beans-5.1.3.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class" />
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/mapper/WxUserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/binarywang/weixin-java-mp/3.1.0/weixin-java-mp-3.1.0-sources.jar!/me/chanjar/weixin/mp/bean/result/WxMpUser.java" />
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/mapper/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2182f59e-724e-4ad8-b0db-eb909f2a7622/console.sql" />
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/util/AuditHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/t_user" />
-    <entry file="file://$PROJECT_DIR$/front/draft/draft8.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2182f59e-724e-4ad8-b0db-eb909f2a7622/console_1.sql" />
-    <entry file="file://$PROJECT_DIR$/back/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/resources/mapper/UserInfoMapper.xml" />
     <entry file="file://$PROJECT_DIR$/back/src/main/resources/mapper/WxUserInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1633,13 +1577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="50" column="18" lean-forward="true" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1706,30 +1643,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx">
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+        <state relative-caret-position="745">
+          <caret line="97" column="29" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="29" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/user_info.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/user_info">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/wx_user_info">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/yarn.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/wx_user_info.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/redux/action-types.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx">
+    <entry file="file://$PROJECT_DIR$/front/config/webpack.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="346">
+          <caret line="254" column="28" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/yarn.lock">
+    <entry file="file://$PROJECT_DIR$/front/config/webpack.config.prod.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1420">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+        <state relative-caret-position="292">
+          <caret line="182" column="54" selection-start-line="182" selection-start-column="50" selection-end-line="182" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/config/webpackDevServer.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1234" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/config/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1194" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/profile/new-user-profile.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/test-component/test-match.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2580">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/test-component/test-component.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1770,16 +1803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/profile/user-profile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -1797,40 +1820,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/WechatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1180">
-          <caret line="78" column="67" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1420">
-          <caret line="97" column="29" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/user_info">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2182f59e-724e-4ad8-b0db-eb909f2a7622/schema/onedaycp/table/wx_user_info">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1858,12 +1847,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/ethermorgan/onedaycp/controller/WechatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="574">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/me/myself-new.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="52" selection-end-line="139" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/profile/home-page.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/cp-interface/cp-interface.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/me/myself.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/profile/user-profile.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/cp-interface/home-page.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>

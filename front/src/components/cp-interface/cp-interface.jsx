@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 
+import {changeMatcherProfile, changeUserProfile} from '../../redux/actions'
 import {connect} from 'react-redux'
 import BottomBar from '../interface-components/bottom-bar'
 import UserProfile from '../profile/user-profile'
 import TestComponent3 from '../test-component/test-component3'
-import {getUserInfo, changeMatcherProfile} from '../../redux/actions'
 
+import HomePage from '../cp-interface/home-page'
 import NewUserProfile from '../profile/new-user-profile'
 import Match from '../match/match'
 import Myself from '../me/myself'
 
-import axios from 'axios'
-import Card from "@material-ui/core/Card/Card";
 
-import TestMatch from "../test-component/test-match"
+import {HashRouter, Route} from 'react-router-dom'
+import axios from "axios";
 
 const styles = {
     root: {},
@@ -24,60 +24,81 @@ const styles = {
 
 class CpInterface extends React.Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     componentDidMount() {
-        // axios.get('https://randomuser.me/api/?results=10&inc=name,registered&nat=fr')
-        //     .then(json => console.log(json))
 
-        // axios.get('http://localhost:8081/')
-        //     .then(json => console.log(json))
-        // let a = 'uyio';
-        // this.props.getUserInfo(a)
-        // axios.get('https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxcb6afee676d68aa8&redirect_uri=http%3a%2f%2foneweekcpuni.mynatapp.cc%2f&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect')
-        //     .then(json => console.log(json))
-
-        // axios.get('http://oneweekcpuni.mynatapp.cc/api/user/getUserInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
-        //     .then(
-        //         json => changeMatcherProfile(json.data.data)
-        //     )
     }
 
     render() {
         let mainPage;
-        if (this.props.userType === 2) {
-            mainPage = (
+
+        // if (this.props.userProfile.userStatus === 2) {
+        //     // this.props.history.replace('/newUserProfile');
+        //     //or <Redirect push to="/sample?a=xxx&b=yyy" /> 传递更多参数
+        // } else if (this.props.userProfile.userStatus === 3) {
+        //
+        // }
+
+        mainPage = (
+            <HashRouter basename="/">
                 <div>
-                    <UserProfile/>
-                </div>
-            )
-        } else {
-            mainPage = (
-                <div>
-                    <div style={{
-                        // marginTop: '1%'
-                        //假如是用户资料,则marginBottom 设20%,假如不是,则不设置
-                        // marginBottom: '20%'
-                        width: '100%',
-                        // paddingLeft: '10%',
-                        // paddingRight: '10%'
-                    }}>
-                        {/*<UserProfile/>*/}
-                        <NewUserProfile/>
-                        {/*<Match/>*/}
-                        {/*<TestMatch/>*/}
-                        {/*<Myself/>*/}
-                    </div>
+                    <Route exact path="/" component={HomePage}/>
+
+                    <Route exact path="/newUserProfile" component={NewUserProfile}/>
+                    <Route exact path="/match" component={Match}/>
+                    <Route exact path="/myself" component={Myself}/>
+
                     <div style={{
                         bottom: '0px',
                         width: '100%',
-                        position: 'fixed'
+                        position: 'fixed',
+                        left: '0px'
                     }}>
-                        {/*<BottomBar/>*/}
-                        {/*<TestComponent3/>*/}
-
+                        <BottomBar/>
                     </div>
                 </div>
-            )
-        }
+
+            </HashRouter>
+        );
+
+        // if (this.props.userType === 2) {
+        //     mainPage = (
+        //         <div>
+        //             <UserProfile/>
+        //         </div>
+        //     )
+        // } else {
+        //     mainPage = (
+        //         <div>
+        //             <div style={{
+        //                 // marginTop: '1%'
+        //                 //假如是用户资料,则marginBottom 设20%,假如不是,则不设置
+        //                 // marginBottom: '20%'
+        //                 width: '100%',
+        //                 // paddingLeft: '10%',
+        //                 // paddingRight: '10%'
+        //             }}>
+        //                 {/*<UserProfile/>*/}
+        //                 {/*<NewUserProfile/>*/}
+        //                 <Match/>
+        //                 {/*<TestMatch/>*/}
+        //                 {/*<Myself/>*/}
+        //             </div>
+        //             <div style={{
+        //                 bottom: '0px',
+        //                 width: '100%',
+        //                 position: 'fixed'
+        //             }}>
+        //                 {/*<BottomBar/>*/}
+        //                 {/*<TestComponent3/>*/}
+        //
+        //             </div>
+        //         </div>
+        //     )
+        // }
 
         return (
             <div>
@@ -91,7 +112,8 @@ CpInterface.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
+// @withRouter
 export default connect(
-    state => ({userType: state.userType}),
-    {getUserInfo, changeMatcherProfile}
+    state => ({userType: state.userType}, {userProfile: state.userProfile}),
+    {changeMatcherProfile, changeUserProfile}
 )(withStyles(styles)(CpInterface));

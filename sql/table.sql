@@ -16,44 +16,48 @@ create table if not exists t_user
 	phone varchar(255) not null
 );
 
+--Table
+
 select schema onedaycp;
 
-create table if not exists wx_user_info
+-- auto-generated definition
+create table wx_user_info
 (
-	id varchar(128) not null,
-	open_id varchar(128) null,
-	nick_name varchar(58) null,
-	sex smallint(6) null,
-	province varchar(128) null,
-	city varchar(128) null,
-	country varchar(128) null,
-	headimg_url varchar(256) null,
-	union_id varchar(128) null,
-	create_time datetime null,
-		unique (ID)
+  id          varchar(128) not null,
+  open_id     varchar(128) null,
+  nick_name   varchar(58)  null,
+  sex         smallint(6)  null,
+  province    varchar(128) null,
+  city        varchar(128) null,
+  country     varchar(128) null,
+  headimg_url varchar(256) null,
+  union_id    varchar(128) null,
+  create_time datetime     null,
+  constraint id
+    unique (id)
 );
-
 
 alter table wx_user_info
-	add primary key (ID);
+  add primary key (id);
 
-
-create table if not exists user_info
+-- auto-generated definition
+create table user_info
 (
-	id varchar(128) not null,
-	open_id varchar(128) null,
-	nick_name varchar(58) null,
-	sex smallint(6) null,
-	match_sex smallint(6) null,
-	birthday datetime null,
-  wechat_id varchar(128) null,
-  university varchar(128) null,
-  major varchar(128) null,
+  id          varchar(128) not null,
+  open_id     varchar(128) null,
+  nick_name   varchar(58)  null,
+  sex         smallint(6)  null,
+  match_sex   smallint(6)  null,
+  birthday    date         null,
+  wechat_id   varchar(128) null,
+  university  varchar(128) null,
+  major       varchar(128) null,
   headimg_url varchar(256) null,
-  user_status varchar(256) null,
-	create_time datetime null,
+  user_status smallint(6)  null,
+  create_time datetime     null,
+  constraint user_info_id_uindex
+    unique (id)
 );
 
-
 alter table user_info
-	add primary key (ID);
+  add primary key (id);

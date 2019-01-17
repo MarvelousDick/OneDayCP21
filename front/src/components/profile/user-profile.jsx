@@ -1,7 +1,7 @@
 import React from 'react'
 import connect from "react-redux/es/connect/connect";
 import {DatePicker, SelectField, TextField} from "react-md";
-import {changeMatcherProfile, changeUserProfile} from '../../redux/actions'
+import {changeUserProfile} from '../../redux/actions'
 import axios from "axios";
 import DateFormat from 'dateformat-util'
 
@@ -15,16 +15,7 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://oneweekcpuni.mynatapp.cc/api/user/userInfo/oefRZ1e0IsLAL9hVTP5aG_Z0vGnA')
-            .then(
-                json => {
-                    this.props.changeUserProfile(json.data.data);
-                    this.setState({
-                        userProfile: json.data.data
-                    });
-                    console.log(this.props.userProfile);
-                }
-            )
+
     }
 
     handleChange = (stateName) => (e) => {
